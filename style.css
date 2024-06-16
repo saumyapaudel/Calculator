@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display{
+    border: 1px solid black;
+    flex:auto;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.operations{
+    padding: 5px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 400px;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+button{
+    width: 70px;
+    height: 80px;
+    font-size: 30px;
+}
+
+.C{
+    background-color: red;
+    color: white;
+}
+#operation{
+    background-color: black;
+    color: white;
+}
+
+.equal{
+    background-color: green;
+    color: white;
+}
