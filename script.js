@@ -13,7 +13,11 @@ function multiply(num1, num2){
     return num1*num2;
 }
 function divide(num1, num2){
+    if(num2 !== 0){
     return num1/num2;
+    }
+    console.log('hi')
+    return "WARNING CANNOT DIVIDE BY 0!!!!"
 }
 
 function operation(num1, num2, operator){
@@ -62,8 +66,9 @@ operations.forEach((operand) =>{
 equal.addEventListener('click', () => {
     num2 = parseInt(display);
     num1 = operation(num1, num2, operator);
-    if(num1.toString().length<17) display = parseFloat(num1.toFixed(16));
-    else display = 'WARNING OVERFLOW!!!';
+    if(num1.toString().length<17 && typeof num1 == "number") {display = parseFloat(num1.toFixed(16));}
+    else if(typeof num1 == "number") {display = 'WARNING OVERFLOW!!!';}
+    else {display = num1}
     displayNum.innerHTML = display;
 })
 
